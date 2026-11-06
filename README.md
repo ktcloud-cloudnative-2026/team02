@@ -13,7 +13,7 @@
 | 항목                            | 링크                                                                                                |
 | ------------------------------- | --------------------------------------------------------------------------------------------------- |
 | 기획·설계 문서, 회의록 (Notion) | [Peak Order](https://app.notion.com/p/Peak-Order-35f2f07e947883f88d530131eb2b8f0b?source=copy_link) |
-| 시퀀스 다이어그램 (FigJam)      | <FigJam 주소>                                                                                       |
+| 시퀀스 다이어그램 (FigJam)      | https://www.figma.com/board/PfXHpZdcoHplNNKP6ZPcx1/kt-cloud-team2?node-id=0-1&t=N8W9xaJJmx3OKX5J-1  |
 | 할 일 보드 (GitHub Projects)    | 준비 중                                                                                             |
 
 ## 링크
