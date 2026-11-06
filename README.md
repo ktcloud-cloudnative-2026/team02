@@ -1,6 +1,8 @@
 # 5xx — 피크오더(Peak Order)
 
-음식점의 피크 시간대에 몰리는 주문을 안정적으로 처리하고, 고객에게 주문 진행 상황과 예상 대기 시간을 실시간으로 보여 주는 주문 서비스입니다.
+## 한 줄 소개
+
+피크 시간대의 음식 주문·재고·조리 대기 흐름을 시뮬레이션하는 클라우드 네이티브 웹 서비스입니다.
 
 Notion 자료에서는 **음식 주문 및 조리 대기 시뮬레이션 웹 서비스**로 설명합니다. 모의 결제를 사용하며, 배포 자동화·모니터링·로깅과 주문·재고 정합성 검증을 목표로 합니다. 구현·검증 완료를 의미하지 않습니다.
 
@@ -8,20 +10,29 @@ Notion 자료에서는 **음식 주문 및 조리 대기 시뮬레이션 웹 서
 > 기획·설계 문서, 코드, 배포 파일, 결정 기록을 이 저장소에 정리합니다. 최종 합의본으로 전환하기 전에는 원문과 미결정 목록을 함께 확인합니다.
 > 현재 제공 자료만으로 팀 최종 승인이 확인된 항목은 없습니다. 서비스 수(3·5·6개), 로그인·관리자 범위와 기술 스택을 임의로 확정하지 않습니다.
 
-## 문서 목차
+## 문서
 
-| 문서 | 내용·현재 상태 |
-|---|---|
-| [프로젝트 기획서](docs/plan.md) | 문제·사용자·범위·성공 목표. 범위 충돌 및 승인 필요 |
-| [요구사항](docs/requirements.md) | US-01~20·SR-01~06·S1~S4. US-14~20은 팀원 승인 필요 |
-| [시스템 아키텍처](docs/architecture.md) | 원문의 5개 서비스 안. 최종 구성 미결정 |
-| [기술 스택](docs/tech-stack.md) | React·Spring Boot·PostgreSQL 등을 포함한 기술 초안 |
-| [미결정 사항과 문서 충돌](docs/pending-decisions.md) | 원문 간 차이, 승인 필요 항목, 확인 질문과 출처 |
-| [설계 결정 기록 양식](docs/adr/0001-template.md) | 기존 양식 유지. 이번 단계에서 개별 ADR을 만들지 않음 |
-| [API 문서](docs/api/README.md) · [ERD 문서](docs/erd/README.md) | 기존 템플릿 유지. 상세 명세 확정·작성 완료를 의미하지 않음 |
-| [역할 분담](docs/roles.md) · [팀 운영](docs/team.md) | 기존 템플릿 유지. Notion 팀 정보 반영은 이번 단계 범위 밖 |
-| [관측 설계](docs/observability.md) · [런북](docs/runbook.md) | 기존 템플릿 유지. 상세 관측·장애 대응 절차는 후속 검토 |
-| [공통 규칙](docs/conventions.md) · [GitHub 사용 가이드](docs/github-guide.md) | 기존 가이드 유지. 팀 규칙과의 대조 필요 |
+<table>
+  <thead>
+    <tr><th>구분</th><th>문서</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan="2">기획</td><td><a href="docs/plan.md">기획서</a></td><td>목표 · 범위 · 성공 기준 · 제약</td></tr>
+    <tr><td><a href="docs/requirements.md">요구사항</a></td><td>기능(US) · 시스템 요구사항(SR) · 시연 시나리오</td></tr>
+    <tr><td rowspan="5">설계</td><td><a href="docs/architecture.md">아키텍처</a></td><td>서비스 구성안 · 책임 · 데이터 소유권</td></tr>
+    <tr><td><a href="docs/tech-stack.md">기술 스택</a></td><td>기술 후보 · 선정 근거 · 확정 상태</td></tr>
+    <tr><td><a href="docs/api/README.md">API 명세</a></td><td>서비스별 API 문서 템플릿</td></tr>
+    <tr><td><a href="docs/erd/README.md">ERD</a></td><td>서비스별 데이터베이스 설계 템플릿</td></tr>
+    <tr><td><a href="docs/observability.md">관측 설계</a></td><td>지표 · 로그 · 알림 (기존 템플릿)</td></tr>
+    <tr><td rowspan="4">협업</td><td><a href="docs/roles.md">역할</a></td><td>서비스 담당 · 공동 영역 담당 (미확정)</td></tr>
+    <tr><td><a href="docs/conventions.md">공통 규칙</a></td><td>Git 전략 · 코드 규칙 · 비밀값 관리</td></tr>
+    <tr><td><a href="docs/team.md">팀 운영 약속</a></td><td>회의 · 의사결정 · 팀 규칙</td></tr>
+    <tr><td><a href="docs/github-guide.md">GitHub 사용 가이드</a></td><td>clone · 브랜치 · PR · 리뷰</td></tr>
+    <tr><td rowspan="3">운영</td><td><a href="docs/runbook.md">런북</a></td><td>장애별 확인 · 조치 (기존 템플릿)</td></tr>
+    <tr><td><a href="docs/pending-decisions.md">미결정 사항</a></td><td>PD-01~17 · 문서 충돌 · 팀 확인 질문</td></tr>
+    <tr><td><a href="docs/adr/0001-template.md">결정 기록 양식</a></td><td>설계 결정 기록(ADR) 템플릿</td></tr>
+  </tbody>
+</table>
 
 ## 상태를 읽는 방법
 
